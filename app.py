@@ -1,6 +1,15 @@
 from config import *
 
-response = model.generate_content("Que empresa criou o modelo de IA Gemini?")
-print(response.text)
+# Desenvolvimeto do app
+
+chat = model.start_chat(history=[])
+
+prompt = input('Esperando prompt: ')
+
+while prompt != "fim":
+  response = chat.send_message(prompt)
+  print("Resposta:", response.text, '\n\n')
+  prompt = input('Esperando prompt: ')
+
 
 
