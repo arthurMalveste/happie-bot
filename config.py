@@ -9,7 +9,7 @@ genai.configure(api_key=GOOGLE_API_KEY)
 
 generation_config = {
   "candidate_count": 1,
-  "temperature": 0.9,
+  "temperature": 1,
 }
 
 safety_settings={

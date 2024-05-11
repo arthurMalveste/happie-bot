@@ -2,6 +2,7 @@ annotated-types==0.6.0
 blinker==1.8.2
 cachetools==5.3.3
 certifi==2024.2.2
+cffi==1.16.0
 charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
@@ -11,6 +12,7 @@ google-api-core==2.19.0
 google-api-python-client==2.129.0
 google-auth==2.29.0
 google-auth-httplib2==0.2.0
+google-cloud-speech==2.26.0
 google-generativeai==0.5.2
 googleapis-common-protos==1.63.0
 grpcio==1.63.0
@@ -24,11 +26,14 @@ proto-plus==1.23.0
 protobuf==4.25.3
 pyasn1==0.6.0
 pyasn1_modules==0.4.0
+PyAudio==0.2.14
+pycparser==2.22
 pydantic==2.7.1
 pydantic_core==2.18.2
 pyparsing==3.1.2
 requests==2.31.0
 rsa==4.9
+sounddevice==0.4.6
 tqdm==4.66.4
 typing_extensions==4.11.0
 uritemplate==4.1.1
