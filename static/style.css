@@ -127,7 +127,7 @@ body{
     flex-direction: column;
     gap: 12px;
     padding: 8px;
-    margin: 0 22%; /* Center horizontally */
+    margin: 0 22% 10% 22%; /* Center horizontally */
     background-color: #333; /* Contrasting background color */
     border-radius: 15px;
   }
@@ -185,7 +185,7 @@ a {
     padding: 10px;
     color: #fff;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 15px 0px 15px 15px;
     margin-left: 50px;
 }
 
@@ -193,7 +193,8 @@ a {
     text-align: left; 
     background-color: #202020;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 0px 15px 15px 15px;
+    margin-bottom: 20px;
     margin-right: 50px;
     color: #fff;
 }
