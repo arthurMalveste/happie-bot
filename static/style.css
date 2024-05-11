@@ -178,3 +178,22 @@ a {
   .menu__link:hover::before {
     width: 100%;
   }
+
+  .user-message {
+    text-align: right;
+    background-color: #4a4a4a;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.ai-message {
+    text-align: left; 
+    background-color: #202020;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 50px;
+    color: #fff;
+}

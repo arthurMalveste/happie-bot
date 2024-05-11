@@ -113,3 +113,44 @@ body {
     background-color: #fff;
     border-color: #fff;
 }
+
+.logo{
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    margin: -25px;
+}
+
+.imglogo{
+    max-width: 200px;
+}
+
+a {
+    text-decoration: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+
+  }
+
+.menu__link {
+    color: #fff;
+    line-height: 2;
+  }
+  
+  .menu__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -.25rem;
+    right: 0;
+    transition: width .4s;
+  }
+  
+  .menu__link:hover::before {
+    width: 100%;
+  }

@@ -22,7 +22,11 @@
             <!-- <h3 class="titulo-bot">Chatbot</h3> -->
             <p class="resposta">
                 {% for message in conversation %}
-                    {{ message }}<br><br>
+                    {% if loop.index is odd %}
+                        <p class="user-message">{{ message }}<br><br></p> 
+                    {% else %}
+                        <p class="ai-message">{{ message }}<br><br></p> 
+                    {% endif %}
                 {% endfor %}
             </p>
         </div>
