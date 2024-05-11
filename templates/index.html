@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
     <title>Chatbot</title>
 </head>
 <body>
+    <div class="side-nav">
+        
+    </div>
     <h1>Chatbot</h1>
     <div id="conversation">
         {% for message in conversation %}
-            <p>{{ message }}</p>
+            <p class="resposta">{{ message }}</p>
         {% endfor %}
     </div>
+    
     <form action="/chat" method="post">
         <input type="text" name="message" placeholder="Digite sua mensagem">
         <button type="submit">Enviar</button>
     </form>
-    <script>
-        // Update conversation display with new messages
-        function updateConversation(message) {
-            const conversation = document.getElementById("conversation");
-            conversation.innerHTML += `<p>${message}</p>`;
-        }
-    </script>
+    <script src="../static/main.js"></script>
 </body>
 </html>
