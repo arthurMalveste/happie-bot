@@ -1,33 +1,21 @@
 from config import *
-from flask import Flask, render_template, request, app
+from flask import Flask, render_template, request
 from apikey import *
+
 
 app = Flask(__name__)
 
-# Desenvolvimeto do app
-
-# chat = model.start_chat(history=[])
-# 
-# prompt = input('Esperando prompt: ')
-# 
-# while prompt != "fim":
-#   response = chat.send_message(prompt)
-#   print("Resposta:", response.text, '\n\n')
-#   prompt = input('Esperando prompt: ')
-
-chat = model.start_chat(history=[])
-
+# Configuração do modelo
 model = genai.GenerativeModel(model_name='gemini-1.0-pro',
                               generation_config=generation_config,
                               safety_settings=safety_settings)
 
-
-
+# Inicialização do chat
+chat = model.start_chat(history=[])
 
 @app.route("/")
 def index():
     return render_template("index.html")
-
 
 @app.route("/chat", methods=["POST"])
 def chat_response():
@@ -37,4 +25,4 @@ def chat_response():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host=('0.0.0.0'))
