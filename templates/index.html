@@ -7,9 +7,6 @@
     <title>Chatbot</title>
 </head>
 <body>
-    <div class="side-nav">
-        
-    </div>
     <h1>Chatbot</h1>
     <div id="conversation">
         {% for message in conversation %}
@@ -17,9 +14,9 @@
         {% endfor %}
     </div>
     
-    <form action="/chat" method="post">
-        <input type="text" name="message" placeholder="Digite sua mensagem">
-        <button type="submit">Enviar</button>
+    <form action="/chat" method="post" class="form-chat">
+        <input type="text" name="message" placeholder="Digite sua mensagem" class="input-chat">
+        <button type="submit" class="btn-chat">E</button>
     </form>
     <script src="../static/main.js"></script>
 </body>

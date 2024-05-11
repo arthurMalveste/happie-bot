@@ -1,16 +1,18 @@
 import requests
 import json
+import os
+print("Diretório Atual:", os.getcwd())
 
 # Substitua por sua chave de API real
 CHAVE_API = "AIzaSyDiUvSpASqqkBm-nwD5O-KWKbLSdxwM1wQ"
 
 # Substitua pelo caminho do seu arquivo de áudio
-CAMINHO_DO_ARQUIVO = "/static/audio/Record (online-voice-recorder.com).mp3"
+CAMINHO_DO_ARQUIVO = "audio.mp3"
 
 # Configure os cabeçalhos da requisição
 cabecalhos = {
     "Authorization": f"Bearer {CHAVE_API}",
-    "Content-Type": "audio/wav",
+    "Content-Type": "audio/mp3",  # Alterado para "audio/mp3"
 }
 
 # Leia o arquivo de áudio como dados binários
