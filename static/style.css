@@ -121,13 +121,14 @@ body{
     background-color: rgba(255, 255, 255, .2);
 }
 
-.div-chat{
-    width: 900px;
-    margin: 0 auto;
+.div-chat {
     display: flex;
+    flex-direction: column;
     gap: 12px;
     padding: 8px;
-}
+    margin: 0 auto; /* Center horizontally */
+    background-color: #333; /* Contrasting background color */
+  }
 
 .chat-logo img{
     width: 32px;
@@ -144,3 +145,34 @@ body{
 
 /* Arthur esteve aqui */
 
+/* <reset-style> ============================ */
+a {
+    text-decoration: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+
+  }
+  /* <main-style> ============================ */
+  .menu__link {
+    color: #fff;
+    line-height: 2;
+    position: relative;
+  }
+  
+  .menu__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -.25rem;
+    left: 0;
+    transition: width .4s;
+  }
+  
+  .menu__link:hover::before {
+    width: 100%;
+  }

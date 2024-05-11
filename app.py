@@ -24,7 +24,7 @@ emojis = [":)", ":D", ";)", ":P", "<3"]
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("form.html")
 
 @app.route("/salvar_dados", methods=["POST"])
 def salvar_dados():
@@ -41,18 +41,16 @@ def salvar_dados():
     nome_salvo = nome
     idade_salva = idade
 
+
     # Redirecionar para outra página ou retornar uma mensagem de sucesso
-    return f"Dados salvos com sucesso! Nome: {nome}, Idade: {idade}"
+    return render_template("index.html")
 
 @app.route("/chat", methods=["POST"])
 def chat_response():
     user_message = request.form["message"]
-
-    nome = "Arthur"
-    idade = "6"
     
     # Adicionar um prefixo ao prompt
-    prefixed_message = "Faça uma mensagem bonita e amigavel de um paragrafo só, responda a pergunta mais haja como se fosse meu amigo, dependendo da idade converce como se fosse da idade também, Olá meu nome é: " + nome + "e eu tenho:" + idade + "responda essa pergunta:" + user_message
+    prefixed_message = "Faça uma mensagem bonita e amigavel de um paragrafo só, responda a pergunta mais haja como se fosse meu amigo, dependendo da idade converce como se fosse da idade também, Olá meu nome é: " + nome_salvo + "e eu tenho:" + idade_salva + "responda essa pergunta:" + user_message
 
     # Verificar se a mensagem do usuário é uma saudação
     if user_message.lower() in ["oi", "olá", "e aí", "olá amigo", "olá amiga"]:

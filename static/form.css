@@ -4,26 +4,47 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0; /* Defina a cor de fundo desejada */
+    background-color: #212121; /* Cor de fundo */
+}
+
+*{
+    color: #fff;
 }
 
 .form-container {
+    transition: all 2s initial;
+    scale: 1.2;
     width: 400px;
-    background-color: #ffffff; /* Defina a cor de fundo da caixa */
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
     border: 2px solid transparent;
     padding: 32px 24px;
     font-size: 14px;
     font-family: inherit;
-    color: #000000; /* Defina a cor do texto */
+    color: white;
     display: flex;
     flex-direction: column;
     gap: 20px;
     box-sizing: border-box;
     border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .form-container button:active {
@@ -45,19 +66,19 @@ body {
 .form-container .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: #717171;
+    /* color: #717171; */
     font-weight: 600;
     font-size: 12px;
 }
 
 .form-container .form-group input {
-    width: calc(100% - 32px); /* Ajusta a largura do input */
+    width: calc(100% - 32px);
     padding: 12px 16px;
     border-radius: 8px;
-    color: #000000; /* Defina a cor do texto do input */
+    color: #fff;
     font-family: inherit;
-    background-color: #f0f0f0; /* Defina a cor de fundo do input */
-    border: 1px solid #d0d0d0; /* Defina a cor da borda do input */
+    background-color: transparent;
+    border: 1px solid #414141;
 }
 
 .form-container .form-group input::placeholder {
@@ -75,11 +96,11 @@ body {
     justify-content: center;
     align-self: flex-start;
     font-family: inherit;
-    color: #ffffff; /* Defina a cor do texto do botão */
+    color: #717171;
     font-weight: 600;
     width: 40%;
     background: #313131;
-    border: 1px solid #414141;
+    border: 1px solid #626262;
     padding: 12px 16px;
     font-size: inherit;
     gap: 8px;
