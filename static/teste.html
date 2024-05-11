@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Transcription</title>
+</head>
+<body>
+    <h1>Audio Transcription</h1>
+    <button id="start-recording">Start Recording</button>
+    <button id="stop-recording">Stop Recording</button>
+    <p id="transcription-result"></p>
+
+    <script>
+        const startRecordingButton = document.getElementById('start-recording');
+        const stopRecordingButton = document.getElementById('stop-recording');
+        const transcriptionResult = document.getElementById('transcription-result');
+        let audioChunks = [];
+
+        // Start recording audio when the Start Recording button is clicked
+        startRecordingButton.addEventListener('click', async () => {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            const mediaRecorder = new MediaRecorder(stream);
+
+            mediaRecorder.addEventListener('dataavailable', event => {
+                audioChunks.push(event.data);
+            });
+
+            mediaRecorder.addEventListener('stop', async () => {
+                const audioBlob = new Blob(audioChunks);
+                const audioFile = new File([audioBlob], 'recorded_audio.mp3', { type: 'audio/mp3' });
+
+                // Transcribe the recorded audio
+                const formData = new FormData();
+                formData.append('audio_file', audioFile);
+                const response = await fetch('/transcribe', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const transcription = await response.text();
+                transcriptionResult.textContent = transcription;
+            });
+
+            mediaRecorder.start();
+        });
+
+        // Stop recording audio when the Stop Recording button is clicked
+        stopRecordingButton.addEventListener('click', () => {
+            mediaRecorder.stop();
+        });
+    </script>
+</body>
+</html>

@@ -7,17 +7,45 @@
     <title>Chatbot</title>
 </head>
 <body>
-    <h1>Chatbot</h1>
-    <div id="conversation">
-        {% for message in conversation %}
+    <div class="div-loader">
+        <div class="loader"></div>
+    </div>
+    <div class="div-chat">
+        <!-- {% for message in conversation %} -->
+        <div class="chat-logo">
+            <img src="../static/img/teste.jpeg">
+        </div>
+        <div class="chat-container">
+            <h3 class="titulo-bot">Chatbot</h3>
             <p class="resposta">{{ message }}</p>
-        {% endfor %}
+        </div>
+        <!-- {% endfor %} -->
     </div>
     
     <form action="/chat" method="post" class="form-chat">
-        <input type="text" name="message" placeholder="Digite sua mensagem" class="input-chat">
-        <button type="submit" class="btn-chat">E</button>
+        <div class="input-group">
+            <input type="text" name="message" placeholder="Digite sua mensagem" class="input-chat" autocomplete="off">
+            <button type="submit" class="btn-chat">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px"version="1.1">
+                    <title>Enviar</title>
+                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Rounded" transform="translate(-374.000000, -1529.000000)">
+                            <g id="Content" transform="translate(100.000000, 1428.000000)">
+                                <g id="-Round-/-Content-/-send" transform="translate(272.000000, 98.000000)">
+                                    <g>
+                                        <polygon id="Path" points="0 0 24 0 24 24 0 24"/>
+                                        <path d="M3.4,20.4 L20.85,12.92 C21.66,12.57 21.66,11.43 20.85,11.08 L3.4,3.6 C2.74,3.31 2.01,3.8 2.01,4.51 L2,9.12 C2,9.62 2.37,10.05 2.87,10.11 L17,12 L2.87,13.88 C2.37,13.95 2,14.38 2,14.88 L2.01,19.49 C2.01,20.2 2.74,20.69 3.4,20.4 Z" fill="#e3e3e3"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </div>
     </form>
+    <iframe style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/iwt4bOIHy7s?si=p9KsVHIH1f_g5AvW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/iwt4bOIHy7s?si=p9KsVHIH1f_g5AvW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <script src="../static/main.js"></script>
 </body>
 </html>
