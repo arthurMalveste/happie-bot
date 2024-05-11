@@ -126,19 +126,27 @@ body{
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 8px;
+    padding: 16px;
     margin: 0 22% 10% 22%; /* Center horizontally */
     background-color: #333; /* Contrasting background color */
-    border-radius: 15px;
-  }
+    border-radius: 16px;
+}
+
+.chat-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
 
 .chat-logo img{
     width: 32px;
 }
 
-.titulo-bot{
+.bot-name{
     font-weight: 800;
     color: #fff;
+    font-size: 16px;
 }
 
 .resposta{
@@ -197,4 +205,30 @@ a {
     margin-bottom: 20px;
     margin-right: 50px;
     color: #fff;
+}
+
+.button-container {
+    position: fixed;
+    bottom: calc(100vh - 100%);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    z-index: 3;
+}
+
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #45a049;
 }

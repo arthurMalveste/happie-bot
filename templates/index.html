@@ -14,10 +14,16 @@
         <div class="loader"></div>
     </div>
     <a class="menu__link" href="/">Voltar</a>
+    <!-- <div class="button-container">
+        <form action="/chat" method="post" class="form-chat">
+            <button type="submit" name="message" value="{{ frases_motivacionais }}">Frases Motivacionais</button>
+            <button type="submit" name="message" value="{{ elogios }}">Elogios</button>
+            <button type="submit" name="message" value="{{ perguntas_aleatorias }}">Perguntas Aleatórias</button>
+            <button type="submit" name="message" value="{{ curiosidades }}">Curiosidades</button>
+        </form>
+    </div> -->
+    
     <div class="div-chat">
-        <div class="chat-logo">
-            <img src="../static/img/teste.jpeg">
-        </div>
         <div class="chat-container">
             <!-- <h3 class="titulo-bot">Chatbot</h3> -->
             <p class="resposta">
@@ -25,7 +31,13 @@
                     {% if loop.index is odd %}
                         <p class="user-message">{{ message }}<br><br></p> 
                     {% else %}
+                    <div class="ai-div">
+                        <div class="chat-logo">
+                            <img src="../static/img/image.png">
+                            <h3 class="bot-name">Happie-Bot</h3>
+                        </div>
                         <p class="ai-message">{{ message }}<br><br></p> 
+                    </div>
                     {% endif %}
                 {% endfor %}
             </p>
@@ -33,7 +45,7 @@
     </div>
     <form action="/chat" method="post" class="form-chat">
         <div class="input-group">
-            <input type="text" name="message" placeholder="Digite sua mensagem" class="input-chat" autocomplete="off">
+            <input type="text" name="message" placeholder="Digite sua mensagem" class="input-chat" autocomplete="off" onkeypress="btnEnviar()">
             <button type="submit" class="btn-chat">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
                     height="20px" version="1.1">
@@ -44,9 +56,7 @@
                                 <g id="-Round-/-Content-/-send" transform="translate(272.000000, 98.000000)">
                                     <g>
                                         <polygon id="Path" points="0 0 24 0 24 24 0 24" />
-                                        <path
-                                            d="M3.4,20.4 L20.85,12.92 C21.66,12.57 21.66,11.43 20.85,11.08 L3.4,3.6 C2.74,3.31 2.01,3.8 2.01,4.51 L2,9.12 C2,9.62 2.37,10.05 2.87,10.11 L17,12 L2.87,13.88 C2.37,13.95 2,14.38 2,14.88 L2.01,19.49 C2.01,20.2 2.74,20.69 3.4,20.4 Z"
-                                            fill="#e3e3e3" />
+                                        <path d="M3.4,20.4 L20.85,12.92 C21.66,12.57 21.66,11.43 20.85,11.08 L3.4,3.6 C2.74,3.31 2.01,3.8 2.01,4.51 L2,9.12 C2,9.62 2.37,10.05 2.87,10.11 L17,12 L2.87,13.88 C2.37,13.95 2,14.38 2,14.88 L2.01,19.49 C2.01,20.2 2.74,20.69 3.4,20.4 Z" fill="#e3e3e3" />
                                     </g>
                                 </g>
                             </g>

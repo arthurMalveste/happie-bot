@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 body {
     display: flex;
     justify-content: center;
@@ -5,10 +7,12 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #212121; /* Cor de fundo */
+    overflow: hidden;
 }
 
 *{
     color: #fff;
+    font-family: "Inter", sans-serif;
 }
 
 .form-container {
@@ -16,7 +20,7 @@ body {
     scale: 1.2;
     width: 400px;
     background: linear-gradient(#212121, #212121) padding-box,
-                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+                linear-gradient(145deg, transparent 35%,#fff, #aaa) border-box;
     border: 2px solid transparent;
     padding: 32px 24px;
     font-size: 14px;
@@ -79,6 +83,7 @@ body {
     font-family: inherit;
     background-color: transparent;
     border: 1px solid #414141;
+    transition: .2s all;
 }
 
 .form-container .form-group input::placeholder {
@@ -87,7 +92,7 @@ body {
 
 .form-container .form-group input:focus {
     outline: none;
-    border-color: #e81cff;
+    border-color: #eee;
 }
 
 .form-container .form-submit-btn {
@@ -104,9 +109,10 @@ body {
     padding: 12px 16px;
     font-size: inherit;
     gap: 8px;
-    margin-top: 8px;
+    margin: 8px auto 0;
     cursor: pointer;
     border-radius: 6px;
+    transition: .2s all;
 }
 
 .form-container .form-submit-btn:hover {
@@ -125,21 +131,21 @@ body {
     max-width: 200px;
 }
 
-a {
+a{
     text-decoration: none;
     position: fixed;
     top: 20px;
     right: 20px;
     font-size: 30px;
 
-  }
+}
 
-.menu__link {
+.menu__link{
     color: #fff;
     line-height: 2;
-  }
+}
   
-  .menu__link::before {
+.menu__link::before{
     content: '';
     width: 0;
     height: 2px;
@@ -149,8 +155,8 @@ a {
     bottom: -.25rem;
     right: 0;
     transition: width .4s;
-  }
+}
   
-  .menu__link:hover::before {
+.menu__link:hover::before{
     width: 100%;
-  }
+}

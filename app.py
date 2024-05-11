@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 from apikey import *
 import random
 from list import *
+from list import frases_motivacionais
 
 
 app = Flask(__name__)
@@ -39,7 +40,7 @@ def chat_response():
     # Retrieve user message from POST data
     user_message = request.form["message"]
     # Add prefix to the prompt
-    prefixed_message = "Faça uma mensagem bonita e amigavel de um paragrafo só, responda a pergunta mais haja como se fosse meu amigo, dependendo da idade converce como se fosse da idade também, se for uma pessoa com 35 anos ou mais não opte por gírias e nem assuntos mais infantis, se a idade for extremamente grande pergunte como piada se esta idade é ralmente a dele. Olá meu nome é: " + nome_salvo + " e eu tenho: " + idade_salva + " responda essa pergunta: " + user_message
+    prefixed_message = "Faça uma mensagem bonita e amigavel de um paragrafo só, finja que você tem idade indefinida e que seu nome é Happie-Bot responda a pergunta mais aja como se fosse meu amigo, dependendo da idade converse como se fosse da idade também, se for uma pessoa com 35 anos ou mais não opte por gírias e nem assuntos mais infantis, se a idade for extremamente grande pergunte como piada se esta idade é ralmente a dele. Olá meu nome é: " + nome_salvo + " e eu tenho: " + idade_salva + " responda essa pergunta: " + user_message
 
     response = chat.send_message(prefixed_message)
 
@@ -56,6 +57,19 @@ def chat_response():
         emoji = random.choice(emojis)
         conversation[-1] += " " + emoji
 
+    def get_ai_response(user_message):
+        if user_message == "Frases motivacionais":
+            return random.choice(frases_motivacionais)
+        elif user_message == "Elogios":
+            return random.choice(elogios)
+        elif user_message == "Perguntas aleatórias":
+            return random.choice(perguntas)
+        elif user_message == "Curiosidades":
+            return random.choice(curiosidades)
+        else:
+            return "Desculpe, não entendi. Por favor, escolha uma opção válida: 'Frases motivacionais', 'Elogios', 'Perguntas aleatórias' ou 'Curiosidades'."
+
+
     # Return the conversation list
     return render_template("index.html", conversation=conversation)
 
@@ -71,21 +85,53 @@ def bye():
     
 #     return ("/")
 
-@app.route("/pergunta_aleatoria")
+@app.route("/perguntaaleatoria")
 def pergunta_aleatoria():
     pergunta = random.choice(perguntas)
 
-@app.route("/frases_motivacionais")
+    response = chat.send_message(pergunta)
+
+    ai_response = response.text.replace('\n', ' ')
+
+    conversation = []
+    conversation.append(pergunta)
+    conversation.append(ai_response) # Adiciona a resposta completa do Gemini
+
+    return render_template("index.html", conversation=conversation)
+
+
+@app.route("/frasesmotivacionais")
 def frases_motivacionais():
-    frases = random.choice(frases_motivacionais)
+    frase = random.choice(frases_motivacionais)
+
+    response = chat.send_message(frase)
+
+    ai_response = response.text.replace('\n', ' ')
+
+    conversation = []
+    conversation.append(frase)
+    conversation.append(ai_response) # Adiciona a resposta completa do Gemini
+
+    return render_template("index.html", conversation=conversation)
 
 @app.route("/elogios")
 def elogios():
     elogio = random.choice(elogios)
 
+    response = chat.send_message(elogio)
+
+    ai_response = response.text.replace('\n', ' ')
+
+    conversation = []
+    conversation.append(elogio)
+    conversation.append(ai_response) # Adiciona a resposta completa do Gemini
+
+    return render_template("index.html", conversation=conversation)
+
 @app.route("/curiosidades")
-def pergunta_aleatoria():
+def curiosidades():
     curiosidade = random.choice(curiosidades)
+    
 
 
 
