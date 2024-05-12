@@ -40,6 +40,99 @@ body{
     background-color: #212121;
 }
 
+.icon-happie{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .3s all;
+    background-color: #212121;
+}
+
+.name-happie{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: .8s all;
+    transform: translate(-50%, -50%);
+    fill: rgba(255, 255, 255, .0);
+}
+
+.animarHappie{
+    animation: animHappie 1.5s forwards ease-in-out ;
+}
+
+.fillHappie{
+    animation: fillHappie .3s forwards ease-in-out;
+}
+
+.name-happie path:nth-child(1){
+    stroke-dasharray: 187px;
+    stroke-dashoffset: 187px;
+}
+
+.name-happie path:nth-child(2){
+    stroke-dasharray: 290px;
+    stroke-dashoffset: 290px;
+}
+
+.name-happie path:nth-child(3){
+    stroke-dasharray: 348px;
+    stroke-dashoffset: 348px;
+}
+
+.name-happie path:nth-child(4){
+    stroke-dasharray: 73px;
+    stroke-dashoffset: 73px;
+}
+
+.name-happie path:nth-child(5){
+    stroke-dasharray: 309px;
+    stroke-dashoffset: 309px;
+}
+
+.name-happie path:nth-child(6){
+    stroke-dasharray: 108px;
+    stroke-dashoffset: 108px;
+}
+
+.name-happie path:nth-child(7){
+    stroke-dasharray: 273px;
+    stroke-dashoffset: 273px;
+}
+
+.name-happie path:nth-child(8){
+    stroke-dasharray: 273px;
+    stroke-dashoffset: 273px;
+}
+
+.name-happie path:nth-child(9){
+    stroke-dasharray: 303px;
+    stroke-dashoffset: 303px;
+}
+
+.name-happie path:nth-child(10){
+    stroke-dasharray: 269px;
+    stroke-dashoffset: 269px;
+}
+
+@keyframes animHappie{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillHappie{
+    to{
+        fill: #fff;
+    }
+}
+
 .div-loader{
     height: 100vh;
     width: 100vw;
@@ -61,6 +154,7 @@ body{
     background-size: 10px 400%;
     background-repeat: no-repeat;
     animation: matrix 1s infinite linear;
+    transition: .2s all;
 }
   
 @keyframes matrix {
@@ -126,7 +220,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 16px;
+    padding: 32px;
     margin: 0 22% 10% 22%; /* Center horizontally */
     background-color: #333; /* Contrasting background color */
     border-radius: 16px;

@@ -12,7 +12,7 @@
       <img class="imglogo" src="/static/img/teste-removebg-preview.png" alt="">
     </div>
     <div class="form-container">
-        <form class="form" action="/salvar_dados" method="post">
+        <form class="formLogin" action="/salvar_dados" method="post">
           <div class="form-group">
             <label for="email">Nome</label>
             <input required="" name="nome" id="email" type="text" autocomplete="off">
@@ -24,5 +24,11 @@
           <button type="submit" class="form-submit-btn">Enviar</button>
         </form>
       </div>
+      <script>
+        const form = document.querySelector(".formLogin")
+        form.addEventListener('submit', () => {
+          localStorage.removeItem('loadStat')
+        })
+      </script>
 </body>
 </html>

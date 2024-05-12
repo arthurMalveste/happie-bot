@@ -101,36 +101,53 @@ def pergunta_aleatoria():
 
 
 @app.route("/frasesmotivacionais")
-def frases_motivacionais():
+def frases_motivacional():
+    print("funcionou")
     frase = random.choice(frases_motivacionais)
 
-    response = chat.send_message(frase)
+    pergunta = "Fale uma frase motivacional"
+
+    response = chat.send_message(pergunta)
 
     ai_response = response.text.replace('\n', ' ')
 
     conversation = []
-    conversation.append(frase)
-    conversation.append(ai_response) # Adiciona a resposta completa do Gemini
+    conversation.append(pergunta)
+    conversation.append(frase) # Adiciona a resposta completa do Gemini
 
     return render_template("index.html", conversation=conversation)
 
 @app.route("/elogios")
-def elogios():
+def elogio():
     elogio = random.choice(elogios)
 
-    response = chat.send_message(elogio)
+    pergunta = "Fale um elogio"
+
+    response = chat.send_message(pergunta)
 
     ai_response = response.text.replace('\n', ' ')
 
     conversation = []
-    conversation.append(elogio)
-    conversation.append(ai_response) # Adiciona a resposta completa do Gemini
+    conversation.append(pergunta)
+    conversation.append(elogio) # Adiciona a resposta completa do Gemini
 
     return render_template("index.html", conversation=conversation)
 
 @app.route("/curiosidades")
-def curiosidades():
+def curiosidade():
     curiosidade = random.choice(curiosidades)
+
+    pergunta = "Fale uma curiosidade"
+
+    response = chat.send_message(pergunta)
+
+    ai_response = response.text.replace('\n', ' ')
+
+    conversation = []
+    conversation.append(pergunta)
+    conversation.append(curiosidade) # Adiciona a resposta completa do Gemini
+
+    return render_template("index.html", conversation=conversation)
     
 
 
