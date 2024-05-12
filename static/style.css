@@ -177,26 +177,32 @@ body{
     height: 60px;
 }
 
-.input-group{
-    display: flex;
-    align-items: center;
-}
-
 .input-chat{
     font-size: 22px;
     padding: 16px 20px;
-    background-color: #333;
+    border-radius: 24px;
+    width: 100%;
     color: #aaa;
-    border: #676767 solid 1px;
     outline: none;
+    border: 0;
+    background-color: transparent;
+}
+
+.input-group{
+    background-color: #333;
+    border: #676767 solid 1px;
     border-radius: 24px;
     width: 80vw;
     max-width: 900px;
     transition: .2s all;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
-.input-chat:focus{
-    box-shadow: 0 0 4px rgba(255, 255, 255, .2);
+.input-group:focus-within{
+    box-shadow: 0 0 4px rgba(255, 255, 255, .3);
 }
 
 .btn-chat{
@@ -211,10 +217,12 @@ body{
     transition: .2s all;
     opacity: 0;
     overflow: hidden;
+    transform: translate(130%, 0);
+    margin-right: 10px;
 }
 
 .btn-chat.mostrar{
-    transform: translate(-120%, 0);
+    transform: translate(0, 0);
     opacity: 1;
 }
 
@@ -270,6 +278,10 @@ body{
     justify-content: center;
 }
 
+.link-btn{
+    transition: .3s all;
+}
+
 .link-btn button{
     color: #fff;
     font-size: 20px;
@@ -287,35 +299,39 @@ body{
     filter: brightness(1.3);
 }
 
+.link-btn:active{
+    transform: translateY(3px);
+}
+
 /* Arthur esteve aqui */
 a{
     text-decoration: none;
 }
 
 .menu__link{
-    color: #fff;
+    color: #000;
     line-height: 2;
     position: relative;
     text-decoration: none;
     top: 20px;
     left: 20px;
     font-size: 22px;
+    padding: 8px 16px;
+    background-color: #aaa;
+    border-radius: 8px;
+    border: 2px solid #aaa;
+    transition: .3s all;
+    font-weight: 500;
 }
-  
-.menu__link::before {
-    content: '';
-    width: 0;
-    height: 2px;
-    border-radius: 2px;
-    background-color: #fff;
-    position: absolute;
-    bottom: -.25rem;
-    left: 0;
-    transition: width .4s;
+
+.menu__link:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
 }
-  
-.menu__link:hover::before {
-    width: 100%;
+
+.menu__link:active{
+    scale: .95;
 }
 
 .user-message {
@@ -362,4 +378,24 @@ a{
 
 .button-container button:hover {
     background-color: #45a049;
+}
+
+@media screen and (max-width: 1540px){
+    body{
+        overflow: hidden;
+    }
+
+    .div-chat{
+        margin: 50px auto 10%;
+    }
+}
+
+@media screen and (max-width: 945px){
+    .sec-botoes{
+        flex-wrap: wrap;
+    }
+
+    .link-btn button{
+        width: 250px;
+    }
 }

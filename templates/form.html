@@ -8,27 +8,40 @@
     <link rel="icon" type="image/png" href="/static/img/logo icon.jpg">
 </head>
 <body>
-    <div class="logo">
-      <img class="imglogo" src="/static/img/teste-removebg-preview.png" alt="">
-    </div>
-    <div class="form-container">
-        <form class="formLogin" action="/salvar_dados" method="post">
-          <div class="form-group">
-            <label for="email">Nome</label>
-            <input required="" name="nome" id="email" type="text" autocomplete="off">
-          </div>
-          <div class="form-group">
-            <label for="textarea">Idade</label>
-            <input required="" name="idade" id="textarea" type="number" autocomplete="off">
-          </div>
-          <button type="submit" class="form-submit-btn">Enviar</button>
-        </form>
-      </div>
-      <script>
-        const form = document.querySelector(".formLogin")
-        form.addEventListener('submit', () => {
-          localStorage.removeItem('loadStat')
-        })
-      </script>
+  <div class="div-loader">
+    <div class="loader"></div>
+  </div>
+  <div class="logo">
+    <img class="imglogo" src="/static/img/teste-removebg-preview.png" alt="">
+  </div>
+  <div class="form-container">
+      <form class="formLogin" action="/salvar_dados" method="post">
+        <div class="happie-icon">
+          <img src="../static/img/image.png">
+        </div>
+        <div class="form-group">
+          <label for="email">Nome</label>
+          <input required="" name="nome" id="email" type="text" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="textarea">Idade</label>
+          <input required="" name="idade" id="textarea" type="number" autocomplete="off">
+        </div>
+        <button type="submit" class="form-submit-btn">Enviar</button>
+      </form>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const divLoader = document.querySelector(".div-loader")
+      divLoader.style.opacity = 0
+      setTimeout(function(){
+          divLoader.remove()
+      }, 300)
+    })
+    const form = document.querySelector(".formLogin")
+    form.addEventListener('submit', () => {
+      localStorage.removeItem('loadStat')
+    })
+  </script>
 </body>
 </html>
