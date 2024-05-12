@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style.css">
-    <link rel="icon" type="image/png" href="/static/img/image.png">
+    <link rel="icon" type="image/png" href="/static/img/icon.png">
     <title>Happie-Bot</title>
 </head>
 <body>
@@ -42,7 +41,6 @@
             <button type="submit" name="message" value="{{ curiosidades }}">Curiosidades</button>
         </form>
     </div> -->
-    
     <div class="div-chat">
         <div class="chat-container">
             <p class="resposta">
@@ -52,7 +50,7 @@
                     {% else %}
                     <div class="ai-div">
                         <div class="chat-logo">
-                            <img src="../static/img/image.png">
+                            <img src="../static/img/icon.png">
                             <h3 class="bot-name">Happie-Bot</h3>
                         </div>
                         <p class="ai-message">{{ message }}<br><br></p> 
@@ -62,6 +60,20 @@
             </p>
         </div>
     </div>
+    <section class="sec-botoes">
+        <a href="/perguntaaleatoria" class="link-btn">
+            <button>Pergunta Aleatoria</button>
+        </a>
+        <a href="/frasesmotivacionais" class="link-btn">
+            <button>Frases Motivacionais</button>
+        </a>
+        <a href="/elogios" class="link-btn">
+            <button>Elogios</button>
+        </a>
+        <a href="/curiosidades" class="link-btn">
+            <button>Curiosidades</button>
+        </a>
+    </section>
     <form action="/chat" method="post" class="form-chat">
         <div class="input-group">
             <input type="text" name="message" placeholder="Digite sua mensagem" class="input-chat" autocomplete="off" onkeypress="btnEnviar()">
