@@ -13,7 +13,7 @@ Ele é um chatbot super inteligente que usa a tecnologia do Google Gemini AI par
 <br>
 
 ## Como o Happie Bot funciona?
-Ele é escrito em Python e usa a API do Google Gemini para processar a linguagem natural e te responder de forma inteligente. A interface do Happie Bot é construída com HTML, CSS e Javascript, para que a experiência seja fácil e agradável.
+Ele é escrito em Python e usa a API do Google Gemini para processar a linguagem natural e te responder de forma inteligente. A interface do Happie Bot é construída com HTML, CSS e Javascript, para que a experiência seja fácil e agradável, além de ser resposivo para outros disposivos.
 
 <br>
 
