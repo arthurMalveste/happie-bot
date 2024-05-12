@@ -32,10 +32,10 @@ Clone este repositório:
 </div></li>
 
 <li><div style="margin: 0 auto; scale: 0.75;">
-    <img src="/static/img/image.png" alt="">
+    <img src="/static/img/captura1.png" alt="">
 </div></li>
 
 <li><div style="margin: 0 auto; scale: 0.75;">
-    <img src="/static/img/image.png" alt="">
+    <img src="/static/img/capture2.png" alt="">
 </div></li>
 
