@@ -8,6 +8,7 @@ Ele é um chatbot super inteligente que usa a tecnologia do Google Gemini AI par
 <li> Te dar palavras de conforto e encorajamento: Ele sabe como te animar quando você estiver para baixo e te dar força para seguir em frente.
 <li>Te ajudar a relaxar e se distrair: Converse sobre seus hobbies, jogue jogos de conversa, ele te ajuda a esquecer dos problemas por um tempo.
 <li> Te dar informações e dicas úteis: Se você precisa de ajuda para lidar com a ansiedade ou depressão, ele pode te indicar recursos e ferramentas confiáveis.
+<li> Com aimações e suas interfaces fica fácil para o usuário interagir com IA, além da possibilidade de usar perguntas rápidas com os botões que ficam em cima do prompt, sendo as respostas fixas em listas, podendo ser editadas dependendo da demanda.
 
 <br>
 
@@ -30,3 +31,12 @@ Clone este repositório:
 <div style="margin: 0 auto; scale: 0.75;">
     <img src="/static/img/image.png" alt="">
 </div>
+
+<div style="margin: 0 auto; scale: 0.75;">
+    <img src="/static/img/captura1.png" alt="">
+</div>
+
+<div style="margin: 0 auto; scale: 0.75;">
+    <img src="/static/img/captura2.png" alt="">
+</div>
+
