@@ -25,9 +25,8 @@ Clone este repositório:
 <li>Configure as credenciais da API Gemini
 
 <li> Execute o script principal: python app.py
-
 <br>
 
-<div style="margin: 0 auto;">
+<div style="margin: 0 auto; scale: 0.75;">
     <img src="/static/img/image.png" alt="">
 </div>
