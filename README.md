@@ -29,4 +29,4 @@ Clone este repositório:
 
 <br>
 
-<img src="/static/img/image.png" alt="">
+<img style="margin: 0 auto;" src="/static/img/image.png" alt="">
