@@ -41,13 +41,13 @@ window.addEventListener('load', () => {
     }
 })
 
-function btnEnviar(){
+inputChat.addEventListener('input', () => {
     if (inputChat.value.length >= 1){
         sendBtn.classList.add("mostrar")
     } else{
         sendBtn.classList.remove("mostrar")
     }
-}
+})
 
 function updateConversation(message) {
     const conversation = document.getElementById("conversation");

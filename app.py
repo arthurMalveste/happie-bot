@@ -45,7 +45,7 @@ def chat_response():
     response = chat.send_message(prefixed_message)
 
     # Combine response lines into a single string
-    ai_response = response.text.replace('\n', ' ')
+    ai_response = response.text.replace('\n', '\n')
      # Substitui quebras de linha por espaços
 
     conversation = []
@@ -91,7 +91,7 @@ def pergunta_aleatoria():
 
     response = chat.send_message(pergunta)
 
-    ai_response = response.text.replace('\n', ' ')
+    # ai_response = response.text.replace('\n', ' ')
 
     conversation = []
     conversation.append(pergunta)
@@ -109,7 +109,7 @@ def frases_motivacional():
 
     response = chat.send_message(pergunta)
 
-    ai_response = response.text.replace('\n', ' ')
+    # ai_response = response.text.replace('\n', ' ')
 
     conversation = []
     conversation.append(pergunta)
@@ -125,7 +125,7 @@ def elogio():
 
     response = chat.send_message(pergunta)
 
-    ai_response = response.text.replace('\n', ' ')
+    # ai_response = response.text.replace('\n', ' ')
 
     conversation = []
     conversation.append(pergunta)
@@ -141,7 +141,7 @@ def curiosidade():
 
     response = chat.send_message(pergunta)
 
-    ai_response = response.text.replace('\n', ' ')
+    # ai_response = response.text.replace('\n', ' ')
 
     conversation = []
     conversation.append(pergunta)

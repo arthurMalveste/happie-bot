@@ -208,8 +208,14 @@ body{
     justify-content: center;
     align-items: center;
     background: transparent;
-    transform: translate(-120%, 0);
     transition: .2s all;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.btn-chat.mostrar{
+    transform: translate(-120%, 0);
+    opacity: 1;
 }
 
 .btn-chat:hover{
@@ -222,9 +228,12 @@ body{
     flex-direction: column;
     gap: 12px;
     padding: 32px;
-    margin: 0 22% 10% 22%; /* Center horizontally */
-    background-color: #333; /* Contrasting background color */
+    width: 80vw;
+    max-width: 1200px;
+    margin: 0 auto 10%;
+    background-color: #333;
     border-radius: 16px;
+    overflow-y: scroll;
 }
 
 .chat-logo{
@@ -249,7 +258,7 @@ body{
 }
 
 .sec-botoes{
-    display: block;
+    display: flex;
     position: absolute;
     bottom: 90px;
     left: 50%;
@@ -261,19 +270,39 @@ body{
     justify-content: center;
 }
 
+.link-btn button{
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 2px #676767 solid;
+    outline: none;
+    background-color: transparent;
+    transition: .3s all;
+}
 
+.link-btn button:hover{
+    cursor: pointer;
+    background-color: #212121;
+    filter: brightness(1.3);
+}
 
 /* Arthur esteve aqui */
+a{
+    text-decoration: none;
+}
 
-/* <reset-style> ============================ */
-  /* <main-style> ============================ */
-  .menu__link {
+.menu__link{
     color: #fff;
     line-height: 2;
     position: relative;
-  }
+    text-decoration: none;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+}
   
-  .menu__link::before {
+.menu__link::before {
     content: '';
     width: 0;
     height: 2px;
@@ -283,13 +312,13 @@ body{
     bottom: -.25rem;
     left: 0;
     transition: width .4s;
-  }
+}
   
-  .menu__link:hover::before {
+.menu__link:hover::before {
     width: 100%;
-  }
+}
 
-  .user-message {
+.user-message {
     text-align: right;
     background-color: #4a4a4a;
     padding: 10px;
