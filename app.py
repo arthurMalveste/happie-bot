@@ -1,6 +1,6 @@
 from config import *
 from flask import Flask, render_template, request
-from apikey import *
+
 import random
 from list import *
 from list import frases_motivacionais

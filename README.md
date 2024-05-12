@@ -28,15 +28,14 @@ Clone este repositório:
 <li> Execute o script principal: python app.py
 <br>
 
-<div style="margin: 0 auto; scale: 0.75;">
+<div style="display: flex; justify-content: center;">
+<div style="margin: 0 auto;">
     <img src="/static/img/image.png" alt="">
 </div>
-
-<div style="margin: 0 auto; scale: 0.75;">
+<div style="margin: 0 auto;">
     <img src="/static/img/captura1.png" alt="">
 </div>
-
-<div style="margin: 0 auto; scale: 0.75;">
+<div style="margin: 0 auto;">
     <img src="/static/img/captura2.png" alt="">
 </div>
-
+</div>
